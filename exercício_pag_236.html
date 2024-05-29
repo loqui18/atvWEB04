@@ -15,6 +15,9 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap; /* Garante que os produtos se ajustem à largura da tela */
         }
         
         .footer {
@@ -22,20 +25,21 @@
             padding: 10px;
             text-align: center;
             color: white;
-            position: fixed;
-            bottom: 0;
-            left: 0;
             width: 100%;
+            clear: both; /* Limpa as flutuações */
         }
         
         .product {
             background-color: green;
-            width: 20%;
+            width: calc(20% - 10px); /* Ajustando a largura considerando a margem entre os produtos */
             padding: 20px;
-            margin-right: 10px;
-            display: inline-block;
-            vertical-align: top;
             box-sizing: border-box;
+            margin-bottom: 20px; /* Espaçamento inferior entre os produtos */
+            margin-right: 10px; /* Adicionando margem direita para espaço entre os produtos */
+        }
+        
+        .product:last-child {
+            margin-right: 0; /* Removendo margem direita do último produto */
         }
         
         .product img {
@@ -48,33 +52,34 @@
 <body>
     <div class="container">
         <div class="product">
-            <img src="caminho_para_imagem_do_produto_1.jpg" alt="Sapato Social Masculino">
+            <img src="sapato-social-masculino.webp" alt="Sapato Social Masculino">
             <h2>Sapato Social Masculino</h2>
             <p>Preço: R$ 199,99</p>
         </div>
         <div class="product">
-            <img src="caminho_para_imagem_do_produto_2.jpg" alt="Tênis Esportivo Feminino">
+            <img src="tenis.fem.webp" alt="Tênis Esportivo Feminino">
             <h2>Tênis Esportivo Feminino</h2>
             <p>Preço: R$ 149,99</p>
         </div>
         <div class="product">
-            <img src="caminho_para_imagem_do_produto_3.jpg" alt="Sandália de Couro Unissex">
+            <img src="couro.jpg" alt="Sandália de Couro Unissex">
             <h2>Sandália de Couro Unissex</h2>
             <p>Preço: R$ 129,99</p>
         </div>
         <div class="product">
-            <img src="caminho_para_imagem_do_produto_4.jpg" alt="Botas de Inverno">
+            <img src="botas.jpg" alt="Botas de Inverno">
             <h2>Botas de Inverno</h2>
             <p>Preço: R$ 189,99</p>
         </div>
         <div class="product">
-            <img src="caminho_para_imagem_do_produto_5.jpg" alt="Sapatilha Conforto">
+            <img src="sapatilha.jpg" alt="Sapatilha Conforto">
             <h2>Sapatilha Conforto</h2>
             <p>Preço: R$ 99,99</p>
         </div>
     </div>
     <div class="footer">
-        <p>Nome da Loja de Calçados</p>
+        <p>Recife Shoes</p>
     </div>
 </body>
 </html>
+
